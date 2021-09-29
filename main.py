@@ -5,7 +5,7 @@ def is_prime(n):
   # codul vostru aici
           if n < 2 : return 0
           else :
-            for divizor in range (2,n) :
+            for divizor in range (2,int(n/2)+1) :
                 if n%divizor == 0 : return 0
 
             return 1
