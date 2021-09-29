@@ -54,25 +54,25 @@ def main():
    print("2.get_product")
    print("3.get_cmmdc_v1")
    print("4.get_cmmdc_v2")
-   alegereSubprog = int(input())
+   alegereSubprog = int(input("Alegere : "))
    if alegereSubprog == 1:
-       n = int(input("Introduceti numarul n pentru a determina daca acesta este prim"))
+       n = int(input("Introduceti numarul n pentru a determina daca acesta este prim : "))
        if is_prime(n) : print("Numarul este prim")
        else : print("Numarul nu este prim")
    elif alegereSubprog == 2 :
        lst = []
-       numarElementeLista = int(input("Introduceti numarul de elemente al listei"))
+       numarElementeLista = int(input("Introduceti numarul de elemente al listei : "))
        for indiceLista in range(0,numarElementeLista):
+           print("Introduceti elementul pe pozitia",indiceLista+1,"din lista : ")
            numarCitit = int(input())
            lst.append(numarCitit)
-       print("Produsul elementelor din sir este :")
-       print(get_product(lst))
+       print("Produsul elementelor din lista este :", get_product(lst))
    elif alegereSubprog == 3 or alegereSubprog == 4 :
-       print("Introduceti numerele x si y ale caror c.m.m.d.c. va fi calculat")
-       x = int(input())
-       y = int(input())
-       if alegereSubprog == 3 : print(get_cmmdc_v1(x,y))
-       elif alegereSubprog == 4 : print(get_cmmdc_v2(x,y))
+       print("Introduceti numerele x si y pentru care va fi calculat c.m.m.d.c.")
+       x = int(input("Introduceti numarul x : "))
+       y = int(input("Introduceit numarul y : "))
+       if alegereSubprog == 3 : print("C.M.M.D.C. este ",get_cmmdc_v1(x,y))
+       elif alegereSubprog == 4 : print("C.M.M.D.C. este ",get_cmmdc_v2(x,y))
 
 
 if __name__ == '__main__':
